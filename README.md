@@ -1,2 +1,2 @@
 # Dot files
-##neovide
+##### neovide
