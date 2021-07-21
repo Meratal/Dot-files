@@ -1,0 +1,118 @@
+
+" Disable compatibility with vi which can cause unexpected issues.
+set nocompatible
+
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
+
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
+
+" Load an indent file for the detected file type.
+filetype indent on
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'morhetz/gruvbox'
+"Plug 'git@github.com:Valloric/YouCompleteMe.git'
+"Plug 'mbbill/undotree'
+"Plug 'dense-analysis/ale'
+Plug 'preservim/nerdtree'
+Plug 'rust-lang/rust.vim'
+"Plug 'sheerun/vim-polyglot'
+Plug 'franbach/miramare'
+Plug 'jcherven/jummidark.vim'
+"Plug 'doums/darcula'
+"
+call plug#end()
+
+"syntax enable
+"filetype plugin indent on
+
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set number
+set rnu
+"enable mouse support 
+set mouse=a
+set nowrap
+set smartcase 
+set noswapfile
+set nobackup
+" Do not let cursor scroll below or above N number of lines when scrolling.
+set scrolloff=10
+
+" While searching though a file incrementally highlight matching characters as you type.
+set incsearch
+
+" Ignore capital letters during search.
+set ignorecase
+
+" Override the ignorecase option if searching for capital letters.
+" This will allow you to search specifically for capital letters.
+set smartcase
+
+" Show partial command you type in the last line of the screen.
+set showcmd
+
+" Show the mode you are on the last line.
+set showmode
+
+" Show matching words during a search.
+set showmatch
+
+" Use highlighting when doing a search.
+set hlsearch
+
+" Set the commands to save in history default number is 20.
+set history=1000
+set undodir=/.vim/undodir
+set undofile
+"set incsearch
+" Highlight cursor line underneath the cursor horizontally.
+set cursorline
+
+" Highlight cursor line underneath the cursor vertically.
+"set cursorcolumn
+
+set t_Co=256
+set termguicolors
+"colorscheme darkblue
+"colorscheme miramare    "awesome theme but not good for rust 
+"colorscheme jummidark
+colorscheme gruvbox
+set background=dark
+"colorscheme darcula
+
+hi CursorLine   cterm=NONE ctermbg=8 ctermfg=NONE
+set colorcolumn=80
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
+" There are certain files that we would never want to edit with Vim.
+" Wildmenu will ignore files with these extensions.
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+" are commented
+
+let g:rustfmt_autosave = 1
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+"Color themes
+"colorscheme miramare    "awesome theme but not good for rust 
+"colorscheme jummidark
+"colorscheme gruvbox
+
+set laststatus=2
