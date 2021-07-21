@@ -82,7 +82,7 @@ set cursorline
 set t_Co=256
 set termguicolors
 "colorscheme darkblue
-"colorscheme miramare    "awesome theme but not good for rust 
+"colorscheme miramare    "awesome theme 
 "colorscheme jummidark
 colorscheme gruvbox
 set background=dark
@@ -109,10 +109,5 @@ let g:rustfmt_autosave = 1
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
-
-"Color themes
-"colorscheme miramare    "awesome theme but not good for rust 
-"colorscheme jummidark
-"colorscheme gruvbox
 
 set laststatus=2
