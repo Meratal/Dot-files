@@ -1,2 +1,1 @@
 alias update='sudo apt update'
-alias cdrgs='cd ~/rust-projects/guessing_game/src/'

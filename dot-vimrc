@@ -135,5 +135,9 @@ python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
 
+"Color themes
+"colorscheme miramare    "awesome theme but not good for rust 
+"colorscheme jummidark
+"colorscheme gruvbox
 
 set laststatus=2
